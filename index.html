@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/48ed1957d1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">
+        <strong>Web</strong>Player<strong>
+          <i class="fa-solid fa-video"></i
+        ></strong>
+      </h1>
+      <div class="theme-container">
+        <div class="theme" for="theme">
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-lightbulb"></i>
+        </div>
+        <div class="color-theme">
+          <label for="color-input"></label>
+          <input
+            type="color"
+            id="color-input"
+            class="color-input"
+            value="#e8590c"
+          />
+        </div>
+      </div>
+    </header>
+    <section class="inputs">
+      <nav>
+        <h3 class="drowdown-item dropdown-title">
+          File <i class="fa-solid fa-arrow-down"></i>
+        </h3>
+        <div class="drowdown-item input-wrapper">
+          <label for="video-file"
+            >Open Video</label
+          >
+          <input type="file" id="video-file" class="choose-video" />
+        </div>
+        <div class="drowdown-item input-wrapper">
+          <label for="subs-file"
+            >Open subs(VTT) </label
+          >
+          <input type="file" id="subs-file" class="choose-subs" />
+        </div>
+      </nav>
+    </section>
+    <section class="content-wrapper">
+      <div class="video-player paused" data-volume="high">
+        <h3 class="video-title">Choose video to play</h3>
+        <button class="replay-btn">
+          <i class="fa-solid fa-arrow-rotate-left"></i>
+        </button>
+        <div class="video-controls">
+          <div class="timeline-container">
+            <div class="timeline">
+              <div class="preview-time">00:00</div>
+              <div class="thumb-indicator"></div>
+            </div>
+          </div>
+          <div class="actions">
+            <div class="actions-left">
+              <button class="play-pause-btn">
+                <i class="fa-solid fa-pause"></i>
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <div class="volume-container">
+                <button class="volume-btn">
+                  <i class="fa-solid fa-volume-xmark"></i>
+                  <i class="fa-solid fa-volume-low"></i>
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+                <input
+                  type="range"
+                  class="volume-slider"
+                  min="0"
+                  max="1"
+                  step="any"
+                />
+              </div>
+              <div class="duration-container">
+                <div class="current-time">00:00</div>
+                /
+                <div class="total-time">00:00</div>
+              </div>
+            </div>
+            <div class="actions-right">
+              <button class="captions-btn">
+                <i class="show-cap-icon fa-regular fa-closed-captioning"></i>
+                <i class="no-cap-icon fa-solid fa-closed-captioning"></i>
+              </button>
+              <button class="playback-speed-btn wide">1.00x</button>
+              <button class="pip-btn">
+                <i class="fa-solid fa-share-from-square"></i>
+              </button>
+              <button class="fullscreen-btn">
+                <i class="fa-solid fa-expand"></i>
+                <i class="fa-solid fa-compress"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <video src="" autoplay>
+          <track kind="captions" srclang="en" src=""></track>
+        </video>
+      </div>
+    </section>
+  </body>
+</html>
